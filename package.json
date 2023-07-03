@@ -1,0 +1,30 @@
+{
+  "name": "passculture-test-app",
+  "version": "1.0.0",
+  "description": "Test pour passCulture",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@testing-library/jest-native": "4.0.13",
+    "@testing-library/react-native": "7.2.0",
+    "jest": "28.1.3",
+    "react": "17.0.*",
+    "react-dom": "17.0.*",
+    "react-native-web": "0.16.1",
+    "react-scripts": "3.4.1",
+    "react-test-renderer": "17.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ]
+  }
+}
