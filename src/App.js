@@ -1,21 +1,27 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text } from "react-native";
 import logo from "./logo-pass-culture.svg";
+import NewsList from "./components/NewsList";
 
 const styles = StyleSheet.create({
   header: {
     backgroundColor: "#282c34",
-    minHeight: "100vh",
+    minHeight: "100%",
     alignItems: "center",
     justifyContent: "center",
     color: "white"
   },
   logo: {
-    height: "10vh",
-    width: "100vw"
+    height: 100,
+    margin: 12,
+    width: "100%"
   },
   title: {
-    fontSize: "calc(10px + 1vh)",
+    fontSize: 16,
+    color: "white",
+    flex: 1
+  },
+  text: {
     color: "white",
     flex: 1
   }
@@ -23,7 +29,7 @@ const styles = StyleSheet.create({
 
 function App() {
   return (
-    <View style={styles.header}>
+    <ScrollView contentContainerStyle={styles.header}>
       <Image
         accessibilityLabel="passCulture logo"
         source={{ uri: logo }}
@@ -31,7 +37,8 @@ function App() {
         style={styles.logo}
       />
       <Text style={styles.title}>Tu as entre 15 et 18 ans ?</Text>
-    </View>
+      <NewsList />
+    </ScrollView>
   );
 }
 
